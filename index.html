@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>test</title>
+<!--  <link rel="stylesheet" href="./css/bootstrap.min.css">-->
+  <script src="./libs/bootstrap.min.js"></script>
+</head>
+<body>
+  <ul class="gloomy-drag-list" ondragover="event.preventDefault()">
+    <li class="gloomy-drag-list-item" draggable="true" data-pushed="false">gloomy-drag-list-item 1</li>
+    <li class="gloomy-drag-list-item" draggable="true" data-pushed="false">gloomy-drag-list-item 2</li>
+    <li class="gloomy-drag-list-item" draggable="true" data-pushed="false">gloomy-drag-list-item 3</li>
+    <li class="gloomy-drag-list-item" draggable="true" data-pushed="false">gloomy-drag-list-item 4</li>
+    <li class="gloomy-drag-list-item" draggable="true" data-pushed="false">gloomy-drag-list-item 5</li>
+  </ul>
+  <h3 class="fuck"></h3>
+  
+  <ul class="group">
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 1</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 2</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 3</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 4</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 5</li>
+  </ul>
+  
+  <ul class="group">
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 6</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 7</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 8</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 9</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 10</li>
+  </ul>
+  
+  <ul class="group">
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 11</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 12</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 13</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 14</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 15</li>
+  </ul>
+  
+  <ul class="group">
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 16</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 17</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 18</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 19</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 20</li>
+  </ul>
+  
+  <ul class="group">
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 21</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 22</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 23</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 24</li>
+    <li class="gloomy-fadeInUp">gloomy-fadeInUp 25</li>
+  </ul>
+  
+  
+  
+</body>
+</html>
+<style>
+  body {
+    /* 모바일 브라우저 pull down refresh 방어용*/
+    overscroll-behavior: contain;
+  }
+
+  .gloomy-drag-list {
+    --bs-gloomy-drag-list-border-color: rgba(0, 0, 0, 0.125);
+    --bs-gloomy-drag-list-border-width: 1px;
+    --bs-gloomy-drag-list-border-radius: 0.375rem;
+    --bs-gloomy-drag-list-action-color: #495057;
+    --bs-gloomy-drag-list-action-hover-color: #495057;
+    --bs-gloomy-drag-list-action-hover-bg: #f8f9fa;
+    --bs-gloomy-drag-list-action-active-color: #212529;
+    --bs-gloomy-drag-list-action-active-bg: #e9ecef;
+    --bs-gloomy-drag-list-disabled-color: #6c757d;
+    --bs-gloomy-drag-list-disabled-bg: #fff;
+    --bs-gloomy-drag-list-active-color: #fff;
+    --bs-gloomy-drag-list-active-bg: #0d6efd;
+    --bs-gloomy-drag-list-active-border-color: #0d6efd;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0.4rem;
+    padding: 20px 20px;
+    margin-top: 0;
+  }
+  .gloomy-drag-list * {
+    user-select: none;
+    box-sizing: border-box;
+  }
+  .gloomy-drag-list-item {
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.125);
+     cursor: grabbing;
+    top:0px;
+    transition: all 0.1s ease-in-out;
+    word-break: break-all
+  }
+  .gloomy-drag-list-item+.gloomy-drag-list-item {
+    border-top-width: 0;
+}
+  .gloomy-drag-list-item:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+  .gloomy-drag-list-item:last-child {
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+  .gloomy-drag-list-item.dragging {
+    transition: 0s;
+  }
+
+  
+  
+  
+  
+  
+  
+  .group * {
+    word-break: break-all;
+  }
+  .gloomy-fadeInRight,.gloomy-fadeInUp,.gloomy-fadeInDown{
+    opacity: 0.1;
+    transition: all 0.7s;
+  }
+  .gloomy-fadeInUp {
+    transform: translateY(50px);
+  }
+  .gloomy-fadeInRight {
+    transform: translateX(-50px);
+  }
+  .gloomy-fadeInDown {
+    transform: translateY(-50px);
+  }
+  .gloomy-fadeInRight.active,.gloomy-fadeInUp.active,.gloomy-fadeInDown.active {
+    opacity: 1;
+    transform: none;
+  }
+  
+  
+  
+  
+  .fuck {
+    opacity: 1;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </style>
+  <script type="module">
+  import gloomyUI from './libs/gloomyUI.js'
+  console.log(gloomyUI)
+  gloomyUI.dragList()
+  gloomyUI.autoFade({keep:true})
+  gloomyUI.getFadeMethod()
+  document.querySelector('.fuck').fadeIn(3000);
+  document.querySelector('.fuck').fadeOut(3000);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script defer src="./demo/highlight.min.js"></script>
+  <script>
+    window.addEventListener('load',()=>{
+      for(let e of document.querySelectorAll('code')){
+        const origin = e.innerHTML.toString()
+        let changed = origin.replace(/\</g,'&lt;');
+        changed = changed.replace(/["](\>)/g,'"&gt;');
+        changed = changed.replace(/['](\>)/g,`'&gt;`);
+        e.innerHTML = changed
+      }
+      hljs.highlightAll();
+    })
+  </script>
+  <link rel="stylesheet" href="./demo/styls.css">
+  <link rel="stylesheet" href="./demo/highlight.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div>
+
+      <dl class="dl">
+        <dt>What is gloomyDate.js?</dt>
+        <dd>
+          <h4 class="title-04 mt-40">intro</h4>
+          <p class="txt">
+            you guys should faced problem with calculating Date.
+            But now on, you can convert the date with <span>gloomyDate.js</span>! <br />
+            you've ever felt difficulty in converting Date in board, comment, and so on...
+            you can put the string in <span>gloomyDate.date(str)</span>, and convert the date with using gloomyDate.
+            <br /><br />
+            developers may love it.
+            </p>
+<pre>
+<code class='js'>
+function App() {
+  const [data,setData] = useState([{ title: 'title1', date: '2022-05-10 10:55:40'}, { title: 'title2', date: '2023-02-11 15:50:30'}])
+  useEffect(()=>{
+    const newData = [...data]
+    newData.forEach(e=> e.date = gloomyDate.date(e.date,'en'))
+    setData(newData)
+  },[])
+  return (
+    <div class="list">
+    {
+      data.map((elm,idx)=>
+      <div key={idx}>
+        <p class="title">{e.title}</p>
+        <p class="date">{e.date}</p> {/* expected: 1 years ago */}
+      </div>
+      )
+    }
+    </div>
+  );
+}
+</code>
+</pre>
+          <p>
+          <br />
+          Expected
+          <br />
+          </p>
+<pre>
+<code class="js white">
+title1
+1 years ago
+
+title2
+2 months ago
+</code>
+</pre>
+          <p>
+            <br /><br /> 
+          </p>
+          <h4 class="title-04 mt-40">deployment</h4>
+          <p class="txt">
+            being deplyed by npm publish. <br />
+          </p>
+<pre>
+<code class="language-js">
+npm i gloomydate
+</code>
+</pre>
+            <p>
+            makes your package has gloomyDate <br /><br />
+            i made this ES Module because of regarding tree shaking, and will make this with named export.
+            <br /><br />
+            you can use gloomyDate in common html project 
+            </p>
+<pre>
+<code class="language-html">
+&lt;script src="https://cdn.gloomy-store.com/gloomyDate/gloomyDate.js"&gt;&lt;/script&gt;
+
+</code>
+</pre>
+            <p>
+            (not the module system)
+            <br /><br />
+            and manual is same with React's
+            <br /><br />
+            <br /><br />
+            this support with 3 global language, and input will be 3 types.
+          </p>
+<pre>
+<code class="language-js">
+gloomyDate.date('2023-04-26 08:10:22','en') // formatted string
+gloomyDate.date('20230426081022','jp') // string
+gloomyDate.date(20230426081022,'ko') // number
+
+</code>
+</pre>
+          <p>
+            'ko', 'jp', 'en' <br />
+            3 language supported
+            <br /><br />
+            Expected: 
+          </p>
+<pre>
+<code class="js white">
+2days ago
+2日前
+2일 전
+</code>
+</pre>
+          <p>
+            default value is korean. ('ko') <br /><br />
+            input should be 14 length of string, number,<br />
+            and it can support format of 'YY-mm-dd H:i:s'
+          </p>
+        </dd>
+      </dl>
+
+    </div>
+    <div class="box-demo">
+      <h3>Demo</h3>
+      <p>
+        <input type="text" id="num" value="20230424140101" />
+      </p>
+      <p>
+        <button onclick="javascript:generator()">generate</button>
+      </p>
+      <p>
+        <input type="text" id="num2" value="2022-09-24 14:30:01" />
+      </p>
+      <p>
+        <button onclick="javascript:generator2()">generate</button>
+      </p>
+    </div>
+
+  </div>
+</body>
+<script>
+function generator(){
+  const num = document.querySelector('#num').value
+  alert(gloomyDate.date(num,'en'))
+}  
+function generator2(){
+  const num = document.querySelector('#num2').value
+  alert(gloomyDate.date(num,'en'))
+}  
+</script>
+</html>

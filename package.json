@@ -1,0 +1,29 @@
+{
+  "name": "gloomyui",
+  "version": "1.0.8",
+  "description": "this returns past time string",
+  "type": "module",
+  "main": "gloomyUI.esm.js",
+  "module": "gloomyUI.esm.js",
+  "scripts": {
+    "test": "node --experimental-modules test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gloomystore/gloomyDate.git"
+  },
+  "keywords": [
+    "getDate",
+    "date",
+    "gloomyUI",
+    "android",
+    "ios"
+  ],
+  "author": "gloomystore",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gloomystore/gloomyUI/issues"
+  },
+  "homepage": "https://github.com/gloomystore/gloomyUI#readme",
+  "releaseDate": "May 04, 2023"
+}
